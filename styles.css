@@ -1,25 +1,19 @@
-/*  your css code here. If applicable */
-  body {
+ body {
       font-family: Arial, sans-serif;
     }
 
-    /* Hide the checkbox */
-    #openModal {
-      display: none;
-    }
-
     /* Button styling */
-    label[for="openModal"] {
-      display: inline-block;
+    #openModal {
       padding: 10px 20px;
       background-color: #007bff;
       color: white;
       border-radius: 6px;
       cursor: pointer;
+      border: none;
       transition: 0.3s;
     }
 
-    label[for="openModal"]:hover {
+    #openModal:hover {
       background-color: #0056b3;
     }
 
@@ -36,8 +30,8 @@
       align-items: center;
     }
 
-    /* Show modal when checkbox is checked */
-    #openModal:checked ~ .modal {
+    /* Show modal when active */
+    .modal.active {
       display: flex;
     }
 
@@ -67,6 +61,8 @@
       font-size: 22px;
       color: #333;
       transition: 0.3s;
+      background: none;
+      border: none;
     }
 
     .close-modal:hover {
@@ -77,7 +73,6 @@
       padding: 20px;
     }
 
-    /* Animation */
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -87,12 +82,4 @@
         opacity: 1;
         transform: scale(1);
       }
-    }
-
-    /* Clicking outside modal closes it */
-    #openModal:checked ~ .modal label.overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      cursor: pointer;
     }

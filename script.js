@@ -1,5 +1,4 @@
-//your JS code here. If required.
-    const openBtn = document.getElementById('openModal');
+   const openBtn = document.getElementById('openModal');
     const closeBtn = document.getElementById('closeModal');
     const modal = document.getElementById('modal');
 
